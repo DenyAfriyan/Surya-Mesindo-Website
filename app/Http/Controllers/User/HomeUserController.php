@@ -24,6 +24,16 @@ class HomeUserController extends Controller
 
         return view('user/index', compact('company', 'header', 'services', 'testimonials', 'programs'));
     }
+    public function index_v2()
+    {
+        $company = CompanyProfile::first();
+        $header = HeaderDescription::get();
+        $services = Service::get();
+        $testimonials = Testimonial::get();
+        $programs = OtherContent::where('category_id', 4)->get();
+
+        return view('user_v2/index', compact('company', 'header', 'services', 'testimonials', 'programs'));
+    }
 
     public function about()
     {

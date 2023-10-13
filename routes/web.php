@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\User\HomeUserController@index')->name('home');
+Route::get('/home-v2', 'App\Http\Controllers\User\HomeUserController@index_v2')->name('home_v2');
 Route::get('/about', 'App\Http\Controllers\User\HomeUserController@about')->name('about');
 Route::get('/program', 'App\Http\Controllers\User\HomeUserController@program')->name('program');
 Route::get('/blog', 'App\Http\Controllers\User\HomeUserController@blog')->name('blog');
