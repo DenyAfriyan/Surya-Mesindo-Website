@@ -16,35 +16,51 @@ class HomeUserController extends Controller
 {
     public function index()
     {
-        $company = CompanyProfile::first();
-        $header = HeaderDescription::get();
-        $services = Service::get();
-        $testimonials = Testimonial::get();
-        $programs = OtherContent::where('category_id', 4)->get();
+        $title = 'Home';
+        $meta ='';
 
-        return view('user/index', compact('company', 'header', 'services', 'testimonials', 'programs'));
-    }
-    public function index_v2()
-    {
-        $company = CompanyProfile::first();
-        $header = HeaderDescription::get();
-        $services = Service::get();
-        $testimonials = Testimonial::get();
-        $programs = OtherContent::where('category_id', 4)->get();
-
-        return view('user_v2/index', compact('company', 'header', 'services', 'testimonials', 'programs'));
+        return view('user_v2/index', compact('title', 'meta'));
     }
 
     public function about()
     {
-        $company = CompanyProfile::first();
-        $header = HeaderDescription::get();
-        $services = Service::get();
-        $testimonials = Testimonial::get();
-        $teachers = Team::get();
-        $main_programs = OtherContent::where('category_id', 2)->get();
+        $title = 'About';
+        $meta ='';
 
-        return view('user/about', compact('company', 'header', 'services', 'testimonials', 'teachers', 'main_programs'));
+        return view('user_v2/about', compact('title', 'meta'));
+    }
+
+    public function whyus()
+    {
+        $title = 'WhyUs';
+        $meta ='';
+
+        return view('user_v2/whyus', compact('title', 'meta'));
+    }
+
+    public function machine()
+    {
+        $title = 'Machine';
+        $type = 'product';
+        $meta ='';
+
+        return view('user_v2/machine', compact('title', 'meta','type'));
+    }
+    
+    public function accesoryproduct()
+    {
+        $title = 'Accessory and Product';
+        $type = 'product';
+        $meta ='';
+
+        return view('user_v2/accessory_sparepart', compact('title', 'meta','type'));
+    }
+
+    public function contact(){
+        $title = 'Contact';
+        $meta ='';
+
+        return view('user_v2/contact', compact('title', 'meta'));
     }
 
     public function program()
@@ -82,10 +98,6 @@ class HomeUserController extends Controller
         return view('user/detailblog', compact('blog', 'company'));
     }
 
-    public function contact(){
-        $company = CompanyProfile::first();
-        return view('user/contact', compact('company'));
-    }
 
     public function altissia(){
         $company = CompanyProfile::first();

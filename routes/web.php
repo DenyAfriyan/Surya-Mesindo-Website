@@ -2,16 +2,21 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'App\Http\Controllers\User\HomeUserController@index')->name('home');
-Route::get('/home-v2', 'App\Http\Controllers\User\HomeUserController@index_v2')->name('home_v2');
 Route::get('/about', 'App\Http\Controllers\User\HomeUserController@about')->name('about');
-Route::get('/program', 'App\Http\Controllers\User\HomeUserController@program')->name('program');
-Route::get('/blog', 'App\Http\Controllers\User\HomeUserController@blog')->name('blog');
+Route::get('/whyus', 'App\Http\Controllers\User\HomeUserController@whyus')->name('whyus');
+Route::get('/machine', 'App\Http\Controllers\User\HomeUserController@machine')->name('machine');
+Route::get('/accessory-and-product', 'App\Http\Controllers\User\HomeUserController@accesoryproduct')->name('accesoryproduct');
 Route::get('/contact', 'App\Http\Controllers\User\HomeUserController@contact')->name('contact');
-Route::get('/altissia', 'App\Http\Controllers\User\HomeUserController@altissia')->name('altissia');
-Route::get('/detailblog/{title}', 'App\Http\Controllers\User\HomeUserController@detailblog')->name('detailblog');
-Route::post('/sendmessage', 'App\Http\Controllers\User\HomeUserController@sendmessage')->name('sendmessage');
-Route::get('/alumni', 'App\Http\Controllers\User\HomeUserController@alumni')->name('alumni');
+
+// Route::get('/program', 'App\Http\Controllers\User\HomeUserController@program')->name('program');
+// Route::get('/blog', 'App\Http\Controllers\User\HomeUserController@blog')->name('blog');
+// Route::get('/contact', 'App\Http\Controllers\User\HomeUserController@contact')->name('contact');
+// Route::get('/altissia', 'App\Http\Controllers\User\HomeUserController@altissia')->name('altissia');
+// Route::get('/detailblog/{title}', 'App\Http\Controllers\User\HomeUserController@detailblog')->name('detailblog');
+// Route::post('/sendmessage', 'App\Http\Controllers\User\HomeUserController@sendmessage')->name('sendmessage');
+// Route::get('/alumni', 'App\Http\Controllers\User\HomeUserController@alumni')->name('alumni');
 
 Auth::routes(['register' => false]);
 

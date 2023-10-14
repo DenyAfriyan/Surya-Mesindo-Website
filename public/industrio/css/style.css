@@ -120,19 +120,19 @@ h6,
     height: 75px;
     display: flex;
     align-items: center;
-    /* background: var(--primary); */
+    /* background: var(--primary); */   
 }
 
-.navbar .navbar-brand::after {
+/* .navbar .navbar-brand::after {
     position: absolute;
     content: "";
-    width: 50px;
+    width: 40px;
     height: 100%;
     top: 0;
-    right: -45px;
+    right: -600px;
     transform: skewX(-30deg);
     background-color: var(--primary);
-}
+} */
 
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
