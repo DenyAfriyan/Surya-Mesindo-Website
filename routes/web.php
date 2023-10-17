@@ -1,14 +1,17 @@
 <?php
 
+use App\Http\Controllers\Admin\SlidersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\User\HomeUserController@index')->name('home');
+Route::get('/tes', 'App\Http\Controllers\User\HomeUserController@index_old')->name('home2');
 Route::get('/about', 'App\Http\Controllers\User\HomeUserController@about')->name('about');
 Route::get('/whyus', 'App\Http\Controllers\User\HomeUserController@whyus')->name('whyus');
 Route::get('/machine', 'App\Http\Controllers\User\HomeUserController@machine')->name('machine');
 Route::get('/accessory-and-product', 'App\Http\Controllers\User\HomeUserController@accesoryproduct')->name('accesoryproduct');
 Route::get('/contact', 'App\Http\Controllers\User\HomeUserController@contact')->name('contact');
+
 
 // Route::get('/program', 'App\Http\Controllers\User\HomeUserController@program')->name('program');
 // Route::get('/blog', 'App\Http\Controllers\User\HomeUserController@blog')->name('blog');
@@ -25,6 +28,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Permissions
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
     Route::resource('permissions', 'PermissionsController');
+
+ 
+
 
     // Roles
     Route::delete('roles/destroy', 'RolesController@massDestroy')->name('roles.massDestroy');
@@ -53,6 +59,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('services/parse-csv-import', 'ServicesController@parseCsvImport')->name('services.parseCsvImport');
     Route::post('services/process-csv-import', 'ServicesController@processCsvImport')->name('services.processCsvImport');
     Route::resource('services', 'ServicesController');
+
+    // Sliders
+    Route::delete('sliders/destroy', 'SlidersController@massDestroy')->name('sliders.massDestroy');
+    Route::post('sliders/media', 'SlidersController@storeMedia')->name('sliders.storeMedia');
+    Route::post('sliders/ckmedia', 'SlidersController@storeCKEditorImages')->name('sliders.storeCKEditorImages');
+    Route::post('sliders/parse-csv-import', 'SlidersController@parseCsvImport')->name('sliders.parseCsvImport');
+    Route::post('sliders/process-csv-import', 'SlidersController@processCsvImport')->name('sliders.processCsvImport');
+    Route::resource('sliders', 'SlidersController');
 
     // Client Partner
     Route::delete('client-partners/destroy', 'ClientPartnerController@massDestroy')->name('client-partners.massDestroy');

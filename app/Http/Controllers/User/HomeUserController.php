@@ -11,6 +11,7 @@ use App\Models\OtherContent;
 use App\Models\Blog;
 use App\Models\Inbox;
 use App\Http\Requests\StoreInboxRequest;
+use App\Models\Slider;
 
 class HomeUserController extends Controller
 {
@@ -18,8 +19,17 @@ class HomeUserController extends Controller
     {
         $title = 'Home';
         $meta ='';
+        $sliders = Slider::all();
+        $dataToView = ['sliders','title', 'meta'];
+     
+        return view('user_v2/index', compact($dataToView));
+    }
+    public function index_old()
+    {
+        $title = 'Home';
+        $meta ='';
 
-        return view('user_v2/index', compact('title', 'meta'));
+        return view('user/index', compact('title', 'meta'));
     }
 
     public function about()

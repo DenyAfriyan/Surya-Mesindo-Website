@@ -159,8 +159,8 @@
                     </li>
                 @endcan
                 @can('content_access')
-                    <li class="nav-item has-treeview {{ request()->is("admin/services*") ? "menu-open" : "" }} {{ request()->is("admin/client-partners*") ? "menu-open" : "" }} {{ request()->is("admin/portfolios*") ? "menu-open" : "" }} {{ request()->is("admin/teams*") ? "menu-open" : "" }} {{ request()->is("admin/blogs*") ? "menu-open" : "" }} {{ request()->is("admin/products*") ? "menu-open" : "" }} {{ request()->is("admin/other-contents*") ? "menu-open" : "" }} {{ request()->is("admin/testimonials*") ? "menu-open" : "" }}">
-                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/services*") ? "active" : "" }} {{ request()->is("admin/client-partners*") ? "active" : "" }} {{ request()->is("admin/portfolios*") ? "active" : "" }} {{ request()->is("admin/teams*") ? "active" : "" }} {{ request()->is("admin/blogs*") ? "active" : "" }} {{ request()->is("admin/products*") ? "active" : "" }} {{ request()->is("admin/other-contents*") ? "active" : "" }} {{ request()->is("admin/testimonials*") ? "active" : "" }}" href="#">
+                    <li class="nav-item has-treeview {{ request()->is("admin/sliders*") ? "menu-open" : "" }} {{ request()->is("admin/client-partners*") ? "menu-open" : "" }} {{ request()->is("admin/portfolios*") ? "menu-open" : "" }} {{ request()->is("admin/teams*") ? "menu-open" : "" }} {{ request()->is("admin/blogs*") ? "menu-open" : "" }} {{ request()->is("admin/products*") ? "menu-open" : "" }} {{ request()->is("admin/other-contents*") ? "menu-open" : "" }} {{ request()->is("admin/testimonials*") ? "menu-open" : "" }}">
+                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/sliders*") ? "active" : "" }} {{ request()->is("admin/client-partners*") ? "active" : "" }} {{ request()->is("admin/portfolios*") ? "active" : "" }} {{ request()->is("admin/teams*") ? "active" : "" }} {{ request()->is("admin/blogs*") ? "active" : "" }} {{ request()->is("admin/products*") ? "active" : "" }} {{ request()->is("admin/other-contents*") ? "active" : "" }} {{ request()->is("admin/testimonials*") ? "active" : "" }}" href="#">
                             <i class="fa-fw nav-icon fab fa-first-order">
 
                             </i>
@@ -170,7 +170,17 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            @can('service_access')
+                            <li class="nav-item">
+                                <a href="{{ route("admin.sliders.index") }}" class="nav-link {{ request()->is("admin/sliders") || request()->is("admin/sliders/*") ? "active" : "" }}">
+                                    <i class="fa-fw nav-icon fas fa-image">
+
+                                    </i>
+                                    <p>
+                                        Sliders
+                                    </p>
+                                </a>
+                            </li>
+                            {{-- @can('service_access')
                                 <li class="nav-item">
                                     <a href="{{ route("admin.services.index") }}" class="nav-link {{ request()->is("admin/services") || request()->is("admin/services/*") ? "active" : "" }}">
                                         <i class="fa-fw nav-icon fas fa-concierge-bell">
@@ -265,7 +275,7 @@
                                         </p>
                                     </a>
                                 </li>
-                            @endcan
+                            @endcan --}}
                         </ul>
                     </li>
                 @endcan

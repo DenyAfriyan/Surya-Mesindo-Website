@@ -90,10 +90,14 @@ class ServicesController extends Controller
         $service = Service::create($request->all());
 
         if ($request->input('cover', false)) {
+            print_r($request->input('cover', false));
+            die;
             $service->addMedia(storage_path('tmp/uploads/' . basename($request->input('cover'))))->toMediaCollection('cover');
         }
 
         if ($media = $request->input('ck-media', false)) {
+            print_r('masuk sini');
+            die;
             Media::whereIn('id', $media)->update(['model_id' => $service->id]);
         }
 

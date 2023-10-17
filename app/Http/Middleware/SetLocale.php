@@ -16,11 +16,11 @@ class SetLocale
         } elseif (config('panel.primary_language')) {
             $language = config('panel.primary_language');
         }
-
+        
         if (isset($language)) {
             app()->setLocale($language);
         }
-
+        
         return $next($request);
     }
 }
