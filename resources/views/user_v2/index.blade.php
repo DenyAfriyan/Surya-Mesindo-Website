@@ -120,42 +120,14 @@
         <h1 class="display-5 text-white mb-5">See What We Have New Product</h1>
     </div>
     <div class="owl-carousel project-carousel wow fadeIn" data-wow-delay="0.1s">
+        @foreach ($newest_machine as $row)
         <a class="project-item" href="">
-            <img class="img-fluid" src="{{asset('mamba/img/product/machine/2.2L Lab-Use Mixer.jpg')}}" alt="">
+            <img class="img-fluid" src="{{ $row->image->url }}" alt="">
             <div class="project-title">
-                <h5 class="text-primary mb-0">Auto Engineering</h5>
+                <h6 class="text-primary fs-7 mb-0">{{ $row->title }}</h6>
             </div>
         </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="{{ asset('industrio/img/project-2.jpg') }}" alt="">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Civil Engineering</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="{{ asset('industrio/img/project-3.jpg') }}" alt="">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Gas Engineering</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="{{ asset('industrio/img/project-4.jpg') }}" alt="">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Power Engineering</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="{{ asset('industrio/img/project-5.jpg') }}" alt="">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Energy Engineering</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="{{ asset('industrio/img/project-6.jpg') }}" alt="">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Water Engineering</h5>
-            </div>
-        </a>
+        @endforeach
     </div>
 </div>
 <!-- Project End -->
@@ -244,7 +216,7 @@
 <!-- Team End --> --}}
 
 
-<!-- Testimonial Start -->
+{{-- <!-- Testimonial Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
@@ -274,7 +246,7 @@
         </div>
     </div>
 </div>
-<!-- Testimonial End -->
+<!-- Testimonial End --> --}}
 @endsection
 
 

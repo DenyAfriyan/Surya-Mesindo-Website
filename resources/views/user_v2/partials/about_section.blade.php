@@ -27,14 +27,15 @@
                         <p><i class="fa fa-check text-primary me-2"></i>Automotive</p>
                         <p><i class="fa fa-check text-primary me-2"></i>Marine Industries</p>
                         <p><i class="fa fa-check text-primary me-2"></i>Shoes/Sandals</p>
-                        <p><i class="fa fa-check text-primary me-2"></i>Rubber and Sponge Mats</p>  
+                        <p><i class="fa fa-check text-primary me-2"></i>Rubber Extruding</p> 
+                        <p><i class="fa fa-check text-primary me-2"></i>Etc</p>  
                     </div>
-                    <div class="ms-4">
+                    {{-- <div class="ms-4">
                         <p><i class="fa fa-check text-primary me-2"></i>Conveyor Belts</p>
                         <p><i class="fa fa-check text-primary me-2"></i>Rubber Extruding</p>
                         <p><i class="fa fa-check text-primary me-2"></i>Industrial Hose</p>
                         <p><i class="fa fa-check text-primary me-2"></i>Etc</p>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="row pt-2">
                     <div class="col-sm-7">

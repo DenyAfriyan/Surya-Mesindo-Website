@@ -17,6 +17,7 @@ use App\Models\Machine;
 use App\Models\Slider;
 use App\Models\Sparepart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class HomeUserController extends Controller
@@ -27,8 +28,10 @@ class HomeUserController extends Controller
         $meta ='';
         $sliders = Slider::all();
         $abouts = About::first();
+
+        $newest_machine = Machine::orderByDesc('id')->limit(6)->get();
         $counters = Counter::all();
-        $dataToView = ['sliders','title', 'meta','abouts','counters'];
+        $dataToView = ['sliders','title', 'meta','abouts','counters','newest_machine'];
      
         return view('user_v2/index', compact($dataToView));
     }

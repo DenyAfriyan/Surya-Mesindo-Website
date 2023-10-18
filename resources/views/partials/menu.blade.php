@@ -331,7 +331,7 @@
                         </a>
                     </li>
                 @endcan
-                @can('user_alert_access')
+                {{-- @can('user_alert_access')
                     <li class="nav-item">
                         <a href="{{ route("admin.user-alerts.index") }}" class="nav-link {{ request()->is("admin/user-alerts") || request()->is("admin/user-alerts/*") ? "active" : "" }}">
                             <i class="fa-fw nav-icon fas fa-bell">
@@ -342,7 +342,7 @@
                             </p>
                         </a>
                     </li>
-                @endcan
+                @endcan --}}
                 @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
                     @can('profile_password_edit')
                         <li class="nav-item">

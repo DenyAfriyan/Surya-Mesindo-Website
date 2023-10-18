@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Surya Mesindo Abadi</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="title" content="PT Surya Mesindo Abadi">
+	<meta name="keywords" content="Automotive, Marine Industries, Shoes/Sandals, Rubber and Sponge Mats, Conveyor Belts, Rubber Extruding, Industrial Hose, etc.">
+	<meta name="description" content="PT Surya Mesindo Abadi We are the market leader in Indonesia's rubber industry.">
 
+    <title>Surya Mesindo Abadi</title>
     <!-- Favicons -->
   <link href="{{ asset('mamba/img/logo.png') }}" rel="icon">
   <link href="{{ asset('mamba/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
@@ -29,6 +30,9 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('industrio/css/style.css') }}" rel="stylesheet">
+	<meta name="keywords" content="PT Surya Mesindo Abadi">
+	<meta name="description" content="PT Surya Mesindo Abadi">
+
 </head>
 
 <body>
