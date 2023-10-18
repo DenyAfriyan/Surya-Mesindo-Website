@@ -29,7 +29,7 @@ class MachineSeeder extends Seeder
             $name = $row['image']; 
             $name = explode('/', $name);
             $name = explode('.',end($name));
-            $store['title'] = $name[0];
+            $store['title'] = $name[count($name)-2];
             $machine = Machine::create($store);
             $machine->addMedia(public_path($row['image']))->toMediaCollection('image');
         }

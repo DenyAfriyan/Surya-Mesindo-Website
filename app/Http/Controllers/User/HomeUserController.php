@@ -15,6 +15,9 @@ use App\Models\About;
 use App\Models\Counter;
 use App\Models\Machine;
 use App\Models\Slider;
+use App\Models\Sparepart;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeUserController extends Controller
 {
@@ -41,8 +44,10 @@ class HomeUserController extends Controller
     {
         $title = 'About';
         $meta ='';
+        $abouts = About::first();
+        $counters = Counter::all();
 
-        return view('user_v2/about', compact('title', 'meta'));
+        return view('user_v2/about', compact('title', 'meta','abouts','counters'));
     }
 
     public function whyus()
@@ -67,9 +72,11 @@ class HomeUserController extends Controller
     {
         $title = 'Accessory and Product';
         $type = 'product';
+        $spareparts = Sparepart::all();
+
         $meta ='';
 
-        return view('user_v2/accessory_sparepart', compact('title', 'meta','type'));
+        return view('user_v2/accessory_sparepart', compact('title', 'meta','type','spareparts'));
     }
 
     public function contact(){
@@ -77,6 +84,20 @@ class HomeUserController extends Controller
         $meta ='';
 
         return view('user_v2/contact', compact('title', 'meta'));
+    }
+
+    public function storeinbox(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|max:255',
+            'subject' => 'required|max:255',
+            'description' => 'required|max:255',
+        ]);
+        Session::flash('success', "Pesan berhasil dikirim");
+        $inbox = Inbox::create($request->all());
+
+        return redirect()->back();
     }
 
     public function program()

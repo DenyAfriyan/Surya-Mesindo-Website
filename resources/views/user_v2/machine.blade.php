@@ -11,9 +11,9 @@
   <div class="row justify-content-center gy-3">
     @foreach ($machines as $machine)
     <div class="col-lg-3 col-md-6">
-      <div class="card border-0 h-100 text-center bg-secondary">
-        <img class="card-img-top" src="{{ $machine->image->url }}">
-        <div class="card-body">
+      <div class="card border-0 h-100 text-center bg-secondary" style="border-radius: 15px">
+        <img class="card-img-top" src="{{ $machine->image->url }}" style="border-top-left-radius: 15px;border-top-right-radius: 15px">
+        <div class="card-body align-items-center d-flex justify-content-center">
           <p class="text-primary fw-bold py-2">{{ $machine->title }}</p>
         </div>
       </div>

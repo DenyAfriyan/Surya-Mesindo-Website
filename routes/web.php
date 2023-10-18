@@ -11,6 +11,7 @@ Route::get('/whyus', 'App\Http\Controllers\User\HomeUserController@whyus')->name
 Route::get('/machine', 'App\Http\Controllers\User\HomeUserController@machine')->name('machine');
 Route::get('/accessory-and-product', 'App\Http\Controllers\User\HomeUserController@accesoryproduct')->name('accesoryproduct');
 Route::get('/contact', 'App\Http\Controllers\User\HomeUserController@contact')->name('contact');
+Route::post('/contactstore', 'App\Http\Controllers\User\HomeUserController@storeinbox')->name('contact.store');
 
 
 // Route::get('/program', 'App\Http\Controllers\User\HomeUserController@program')->name('program');
