@@ -99,17 +99,17 @@
         center: true,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
+        nav : false,
+        // navText : [
+        //     '<i class="bi bi-arrow-left"></i>',
+        //     '<i class="bi bi-arrow-right"></i>'
+        // ],
         responsive: {
             0:{
-                items:1
+                items:4
             },
             768:{
-                items:2
+                items:4
             }
         }
     });

@@ -14,12 +14,8 @@
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <p class="fw-medium text-uppercase text-primary mb-2">About Us</p>
-                <h1 class="display-5 mb-4">Rubber Manufacturing Machinery Provider In Indonesia</h1>
-                <p class="mb-4">For over three decades, we have delivered various of rubber processing 
-                    machineries to reputable manufacturers across Indonesia. With our excellent 
-                    commitment to support greater process efficiency and labour productivity, we 
-                    offer a broad range of rubber processing machines, accessories, and original 
-                    spare parts to meet the needs of manufacturers across industry.
+                <h1 class="display-5 mb-4">{{ $abouts->title }}</h1>
+                <p class="mb-4">{{$abouts->description}}
                 </p>
                 <div class="d-flex align-items-center mb-4">
                     <div class="flex-shrink-0 bg-primary p-4">

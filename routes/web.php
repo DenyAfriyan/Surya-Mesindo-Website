@@ -68,6 +68,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('sliders/process-csv-import', 'SlidersController@processCsvImport')->name('sliders.processCsvImport');
     Route::resource('sliders', 'SlidersController');
 
+    // abouts
+    Route::resource('abouts', 'aboutsController');
+
     // Client Partner
     Route::delete('client-partners/destroy', 'ClientPartnerController@massDestroy')->name('client-partners.massDestroy');
     Route::post('client-partners/media', 'ClientPartnerController@storeMedia')->name('client-partners.storeMedia');

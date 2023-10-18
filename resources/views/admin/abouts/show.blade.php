@@ -3,13 +3,13 @@
 
 <div class="card">
     <div class="card-header">
-        Show Slider
+        Show About
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('admin.sliders.index') }}">
+                <a class="btn btn-default" href="{{ route('admin.abouts.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
@@ -20,7 +20,7 @@
                             {{ trans('cruds.service.fields.id') }}
                         </th>
                         <td>
-                            {{ $slider->id }}
+                            {{ $about->id }}
                         </td>
                     </tr>
                     <tr>
@@ -28,7 +28,7 @@
                             {{ trans('cruds.service.fields.title') }}
                         </th>
                         <td>
-                            {{ $slider->title }}
+                            {{ $about->title }}
                         </td>
                     </tr>
                     <tr>
@@ -36,25 +36,13 @@
                             {{ trans('cruds.service.fields.description') }}
                         </th>
                         <td>
-                            {{ $slider->description }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            Image
-                        </th>
-                        <td>
-                            @if($slider->image)
-                                <a href="{{ $slider->image->getUrl() }}" target="_blank" style="display: inline-block">
-                                    <img src="{{ $slider->image->getUrl('thumb') }}">
-                                </a>
-                            @endif
+                            {{ $about->description }}
                         </td>
                     </tr>
                 </tbody>
             </table>
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('admin.sliders.index') }}">
+                <a class="btn btn-default" href="{{ route('admin.abouts.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>

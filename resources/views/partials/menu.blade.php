@@ -159,8 +159,8 @@
                     </li>
                 @endcan
                 @can('content_access')
-                    <li class="nav-item has-treeview {{ request()->is("admin/sliders*") ? "menu-open" : "" }} {{ request()->is("admin/client-partners*") ? "menu-open" : "" }} {{ request()->is("admin/portfolios*") ? "menu-open" : "" }} {{ request()->is("admin/teams*") ? "menu-open" : "" }} {{ request()->is("admin/blogs*") ? "menu-open" : "" }} {{ request()->is("admin/products*") ? "menu-open" : "" }} {{ request()->is("admin/other-contents*") ? "menu-open" : "" }} {{ request()->is("admin/testimonials*") ? "menu-open" : "" }}">
-                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/sliders*") ? "active" : "" }} {{ request()->is("admin/client-partners*") ? "active" : "" }} {{ request()->is("admin/portfolios*") ? "active" : "" }} {{ request()->is("admin/teams*") ? "active" : "" }} {{ request()->is("admin/blogs*") ? "active" : "" }} {{ request()->is("admin/products*") ? "active" : "" }} {{ request()->is("admin/other-contents*") ? "active" : "" }} {{ request()->is("admin/testimonials*") ? "active" : "" }}" href="#">
+                    <li class="nav-item has-treeview {{ request()->is("admin/sliders*") ? "menu-open" : "" }} {{ request()->is("admin/abouts*") ? "menu-open" : "" }} {{ request()->is("admin/portfolios*") ? "menu-open" : "" }} {{ request()->is("admin/teams*") ? "menu-open" : "" }} {{ request()->is("admin/blogs*") ? "menu-open" : "" }} {{ request()->is("admin/products*") ? "menu-open" : "" }} {{ request()->is("admin/other-contents*") ? "menu-open" : "" }} {{ request()->is("admin/testimonials*") ? "menu-open" : "" }}">
+                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/sliders*") ? "active" : "" }} {{ request()->is("admin/abouts*") ? "active" : "" }} {{ request()->is("admin/portfolios*") ? "active" : "" }} {{ request()->is("admin/teams*") ? "active" : "" }} {{ request()->is("admin/blogs*") ? "active" : "" }} {{ request()->is("admin/products*") ? "active" : "" }} {{ request()->is("admin/other-contents*") ? "active" : "" }} {{ request()->is("admin/testimonials*") ? "active" : "" }}" href="#">
                             <i class="fa-fw nav-icon fab fa-first-order">
 
                             </i>
@@ -177,6 +177,16 @@
                                     </i>
                                     <p>
                                         Sliders
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route("admin.abouts.index") }}" class="nav-link {{ request()->is("admin/abouts") || request()->is("admin/abouts/*") ? "active" : "" }}">
+                                    <i class="fa-fw nav-icon fas fa-font">
+
+                                    </i>
+                                    <p>
+                                        Abouts
                                     </p>
                                 </a>
                             </li>

@@ -11,6 +11,7 @@ use App\Models\OtherContent;
 use App\Models\Blog;
 use App\Models\Inbox;
 use App\Http\Requests\StoreInboxRequest;
+use App\Models\About;
 use App\Models\Slider;
 
 class HomeUserController extends Controller
@@ -20,7 +21,8 @@ class HomeUserController extends Controller
         $title = 'Home';
         $meta ='';
         $sliders = Slider::all();
-        $dataToView = ['sliders','title', 'meta'];
+        $abouts = About::first();
+        $dataToView = ['sliders','title', 'meta','abouts'];
      
         return view('user_v2/index', compact($dataToView));
     }

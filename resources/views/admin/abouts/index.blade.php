@@ -3,13 +3,13 @@
 @can('service_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            {{-- <a class="btn btn-success" href="{{ route('admin.sliders.create') }}">
+            {{-- <a class="btn btn-success" href="{{ route('admin.abouts.create') }}">
                 Create Slider
             </a> --}}
             {{-- <button class="btn btn-warning" data-toggle="modal" data-target="#csvImportModal">
                 {{ trans('global.app_csvImport') }}
             </button> --}}
-            {{-- @include('csvImport.modal', ['model' => 'Service', 'route' => 'admin.sliders.parseCsvImport']) --}}
+            {{-- @include('csvImport.modal', ['model' => 'Service', 'route' => 'admin.abouts.parseCsvImport']) --}}
         </div>
     </div>
 @endcan
@@ -35,9 +35,6 @@
                         {{ trans('cruds.service.fields.description') }}
                     </th>
                     <th>
-                        Image
-                    </th>
-                    <th>
                         &nbsp;
                     </th>
                 </tr>
@@ -61,13 +58,12 @@
     serverSide: true,
     retrieve: true,
     aaSorting: [],
-    ajax: "{{ route('admin.sliders.index') }}",
+    ajax: "{{ route('admin.abouts.index') }}",
     columns: [
       { data: 'placeholder', name: 'placeholder' },
 { data: 'id', name: 'id' },
 { data: 'title', name: 'title' },
 { data: 'description', name: 'description' },
-{ data: 'image', name: 'image', sortable: false, searchable: false },
 { data: 'actions', name: '{{ trans('global.actions') }}' }
     ],
     orderCellsTop: true,
