@@ -105,6 +105,16 @@
                                     </p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route("admin.spareparts.index") }}" class="nav-link {{ request()->is("admin/spareparts") || request()->is("admin/spareparts/*") ? "active" : "" }}">
+                                    <i class="fa-fw nav-icon fas fa-check-double">
+
+                                    </i>
+                                    <p>
+                                        Sparepart
+                                    </p>
+                                </a>
+                            </li>
                             {{-- @can('company_profile_access')
                                 <li class="nav-item">
                                     <a href="{{ route("admin.company-profiles.index") }}" class="nav-link {{ request()->is("admin/company-profiles") || request()->is("admin/company-profiles/*") ? "active" : "" }}">
