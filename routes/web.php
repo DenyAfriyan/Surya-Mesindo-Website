@@ -60,6 +60,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('services/process-csv-import', 'ServicesController@processCsvImport')->name('services.processCsvImport');
     Route::resource('services', 'ServicesController');
 
+    // Machine
+    Route::delete('machines/destroy', 'MachinesController@massDestroy')->name('machines.massDestroy');
+    Route::post('machines/media', 'MachinesController@storeMedia')->name('machines.storeMedia');
+    Route::post('machines/ckmedia', 'MachinesController@storeCKEditorImages')->name('machines.storeCKEditorImages');
+    Route::post('machines/parse-csv-import', 'MachinesController@parseCsvImport')->name('machines.parseCsvImport');
+    Route::post('machines/process-csv-import', 'MachinesController@processCsvImport')->name('machines.processCsvImport');
+    Route::resource('machines', 'MachinesController');
+
     // Sliders
     Route::delete('sliders/destroy', 'SlidersController@massDestroy')->name('sliders.massDestroy');
     Route::post('sliders/media', 'SlidersController@storeMedia')->name('sliders.storeMedia');

@@ -84,8 +84,8 @@
                     </li>
                 @endcan
                 @can('master_data_access')
-                    <li class="nav-item has-treeview {{ request()->is("admin/company-profiles*") ? "menu-open" : "" }} {{ request()->is("admin/header-descriptions*") ? "menu-open" : "" }} {{ request()->is("admin/category-blogs*") ? "menu-open" : "" }} {{ request()->is("admin/category-products*") ? "menu-open" : "" }} {{ request()->is("admin/category-contents*") ? "menu-open" : "" }}">
-                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/company-profiles*") ? "active" : "" }} {{ request()->is("admin/header-descriptions*") ? "active" : "" }} {{ request()->is("admin/category-blogs*") ? "active" : "" }} {{ request()->is("admin/category-products*") ? "active" : "" }} {{ request()->is("admin/category-contents*") ? "active" : "" }}" href="#">
+                    <li class="nav-item has-treeview {{ request()->is("admin/machines*") ? "menu-open" : "" }} {{ request()->is("admin/header-descriptions*") ? "menu-open" : "" }} {{ request()->is("admin/category-blogs*") ? "menu-open" : "" }} {{ request()->is("admin/category-products*") ? "menu-open" : "" }} {{ request()->is("admin/category-contents*") ? "menu-open" : "" }}">
+                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/machines*") ? "active" : "" }} {{ request()->is("admin/header-descriptions*") ? "active" : "" }} {{ request()->is("admin/category-blogs*") ? "active" : "" }} {{ request()->is("admin/category-products*") ? "active" : "" }} {{ request()->is("admin/category-contents*") ? "active" : "" }}" href="#">
                             <i class="fa-fw nav-icon fas fa-database">
 
                             </i>
@@ -95,6 +95,16 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route("admin.machines.index") }}" class="nav-link {{ request()->is("admin/machines") || request()->is("admin/machines/*") ? "active" : "" }}">
+                                    <i class="fa-fw nav-icon fas fa-industry">
+
+                                    </i>
+                                    <p>
+                                        Machines
+                                    </p>
+                                </a>
+                            </li>
                             {{-- @can('company_profile_access')
                                 <li class="nav-item">
                                     <a href="{{ route("admin.company-profiles.index") }}" class="nav-link {{ request()->is("admin/company-profiles") || request()->is("admin/company-profiles/*") ? "active" : "" }}">
