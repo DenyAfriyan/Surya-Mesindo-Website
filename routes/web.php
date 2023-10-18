@@ -69,7 +69,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('sliders', 'SlidersController');
 
     // abouts
-    Route::resource('abouts', 'aboutsController');
+    Route::resource('abouts', 'AboutsController');
+
+    // counter
+    Route::resource('counters', 'CountersController');
 
     // Client Partner
     Route::delete('client-partners/destroy', 'ClientPartnerController@massDestroy')->name('client-partners.massDestroy');

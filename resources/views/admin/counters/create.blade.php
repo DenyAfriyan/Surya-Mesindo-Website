@@ -3,16 +3,15 @@
 
 <div class="card">
     <div class="card-header">
-        Edit Slider
+        Create Slider
     </div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route("admin.sliders.update", [$slider->id]) }}" enctype="multipart/form-data">
-            @method('PUT')
+        <form method="POST" action="{{ route("admin.sliders.store") }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label class="required" for="title">{{ trans('cruds.service.fields.title') }}</label>
-                <input class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title" id="title" value="{{ old('title', $slider->title) }}" required>
+                <input class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title" id="title" value="{{ old('title', '') }}" required>
                 @if($errors->has('title'))
                     <span class="text-danger">{{ $errors->first('title') }}</span>
                 @endif
@@ -20,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label for="description">{{ trans('cruds.service.fields.description') }}</label>
-                <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" id="description">{{ old('description', $slider->description) }}</textarea>
+                <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" id="description">{{ old('description') }}</textarea>
                 @if($errors->has('description'))
                     <span class="text-danger">{{ $errors->first('description') }}</span>
                 @endif
@@ -30,6 +29,9 @@
                 <label for="image">Image</label>
                 <div class="needsclick dropzone {{ $errors->has('image') ? 'is-invalid' : '' }}" id="image-dropzone">
                 </div>
+                @if($errors->has('image'))
+                    <span class="text-danger">{{ $errors->first('image') }}</span>
+                @endif
             </div>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">
@@ -72,8 +74,8 @@
       }
     },
     init: function () {
-@if(isset($slider) && $slider->image)
-      var file = {!! json_encode($slider->image) !!}
+@if(isset($service) && $service->image)
+      var file = {!! json_encode($service->image) !!}
           this.options.addedfile.call(this, file)
       this.options.thumbnail.call(this, file, file.preview ?? file.preview_url)
       file.previewElement.classList.add('dz-complete')

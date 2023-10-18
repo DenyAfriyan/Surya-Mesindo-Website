@@ -95,7 +95,7 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            @can('company_profile_access')
+                            {{-- @can('company_profile_access')
                                 <li class="nav-item">
                                     <a href="{{ route("admin.company-profiles.index") }}" class="nav-link {{ request()->is("admin/company-profiles") || request()->is("admin/company-profiles/*") ? "active" : "" }}">
                                         <i class="fa-fw nav-icon fas fa-building">
@@ -154,13 +154,13 @@
                                         </p>
                                     </a>
                                 </li>
-                            @endcan
+                            @endcan --}}
                         </ul>
                     </li>
                 @endcan
                 @can('content_access')
-                    <li class="nav-item has-treeview {{ request()->is("admin/sliders*") ? "menu-open" : "" }} {{ request()->is("admin/abouts*") ? "menu-open" : "" }} {{ request()->is("admin/portfolios*") ? "menu-open" : "" }} {{ request()->is("admin/teams*") ? "menu-open" : "" }} {{ request()->is("admin/blogs*") ? "menu-open" : "" }} {{ request()->is("admin/products*") ? "menu-open" : "" }} {{ request()->is("admin/other-contents*") ? "menu-open" : "" }} {{ request()->is("admin/testimonials*") ? "menu-open" : "" }}">
-                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/sliders*") ? "active" : "" }} {{ request()->is("admin/abouts*") ? "active" : "" }} {{ request()->is("admin/portfolios*") ? "active" : "" }} {{ request()->is("admin/teams*") ? "active" : "" }} {{ request()->is("admin/blogs*") ? "active" : "" }} {{ request()->is("admin/products*") ? "active" : "" }} {{ request()->is("admin/other-contents*") ? "active" : "" }} {{ request()->is("admin/testimonials*") ? "active" : "" }}" href="#">
+                    <li class="nav-item has-treeview {{ request()->is("admin/sliders*") ? "menu-open" : "" }} {{ request()->is("admin/abouts*") ? "menu-open" : "" }} {{ request()->is("admin/counters*") ? "menu-open" : "" }} {{ request()->is("admin/teams*") ? "menu-open" : "" }} {{ request()->is("admin/blogs*") ? "menu-open" : "" }} {{ request()->is("admin/products*") ? "menu-open" : "" }} {{ request()->is("admin/other-contents*") ? "menu-open" : "" }} {{ request()->is("admin/testimonials*") ? "menu-open" : "" }}">
+                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/sliders*") ? "active" : "" }} {{ request()->is("admin/abouts*") ? "active" : "" }} {{ request()->is("admin/counters*") ? "active" : "" }} {{ request()->is("admin/teams*") ? "active" : "" }} {{ request()->is("admin/blogs*") ? "active" : "" }} {{ request()->is("admin/products*") ? "active" : "" }} {{ request()->is("admin/other-contents*") ? "active" : "" }} {{ request()->is("admin/testimonials*") ? "active" : "" }}" href="#">
                             <i class="fa-fw nav-icon fab fa-first-order">
 
                             </i>
@@ -187,6 +187,16 @@
                                     </i>
                                     <p>
                                         Abouts
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route("admin.counters.index") }}" class="nav-link {{ request()->is("admin/counters") || request()->is("admin/counters/*") ? "active" : "" }}">
+                                    <i class="fa-fw nav-icon fas fa-list">
+
+                                    </i>
+                                    <p>
+                                        Counters
                                     </p>
                                 </a>
                             </li>
