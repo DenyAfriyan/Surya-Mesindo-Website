@@ -84,8 +84,8 @@
                     </li>
                 @endcan
                 @can('master_data_access')
-                    <li class="nav-item has-treeview {{ request()->is("admin/machines*") ? "menu-open" : "" }} {{ request()->is("admin/header-descriptions*") ? "menu-open" : "" }} {{ request()->is("admin/category-blogs*") ? "menu-open" : "" }} {{ request()->is("admin/category-products*") ? "menu-open" : "" }} {{ request()->is("admin/category-contents*") ? "menu-open" : "" }}">
-                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/machines*") ? "active" : "" }} {{ request()->is("admin/header-descriptions*") ? "active" : "" }} {{ request()->is("admin/category-blogs*") ? "active" : "" }} {{ request()->is("admin/category-products*") ? "active" : "" }} {{ request()->is("admin/category-contents*") ? "active" : "" }}" href="#">
+                    <li class="nav-item has-treeview {{ request()->is("admin/machines*") ? "menu-open" : "" }} {{ request()->is("admin/spareparts*") ? "menu-open" : "" }} {{ request()->is("admin/category-blogs*") ? "menu-open" : "" }} {{ request()->is("admin/category-products*") ? "menu-open" : "" }} {{ request()->is("admin/category-contents*") ? "menu-open" : "" }}">
+                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/machines*") ? "active" : "" }} {{ request()->is("admin/spareparts*") ? "active" : "" }} {{ request()->is("admin/category-blogs*") ? "active" : "" }} {{ request()->is("admin/category-products*") ? "active" : "" }} {{ request()->is("admin/category-contents*") ? "active" : "" }}" href="#">
                             <i class="fa-fw nav-icon fas fa-database">
 
                             </i>

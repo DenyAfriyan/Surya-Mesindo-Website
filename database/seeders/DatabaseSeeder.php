@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
             RoleUserTableSeeder::class,
             SliderSeeder::class,
             AboutSeeder::class,
-            CounterSeeder::class
+            CounterSeeder::class,
+            MachineSeeder::class,
+            SparepartSeeder::class
         ]);
     }
 }

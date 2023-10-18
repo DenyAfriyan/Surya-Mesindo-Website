@@ -13,6 +13,7 @@ use App\Models\Inbox;
 use App\Http\Requests\StoreInboxRequest;
 use App\Models\About;
 use App\Models\Counter;
+use App\Models\Machine;
 use App\Models\Slider;
 
 class HomeUserController extends Controller
@@ -56,9 +57,10 @@ class HomeUserController extends Controller
     {
         $title = 'Machine';
         $type = 'product';
+        $machines = Machine::all();
         $meta ='';
 
-        return view('user_v2/machine', compact('title', 'meta','type'));
+        return view('user_v2/machine', compact('title', 'meta','type','machines'));
     }
     
     public function accesoryproduct()

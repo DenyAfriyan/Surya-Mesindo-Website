@@ -8,16 +8,13 @@
   </div>
 </div>
 <div class="container py-5">
-  <div class="row justify-content-center">
-    @foreach(File::glob(public_path('mamba/img/product/machine').'/*') as $path)
+  <div class="row justify-content-center gy-3">
+    @foreach ($machines as $machine)
     <div class="col-lg-3 col-md-6">
-      <div class="card border-0 h-100 text-center">
+      <div class="card border-0 h-100 text-center bg-secondary">
+        <img class="card-img-top" src="{{ $machine->image->url }}">
         <div class="card-body">
-          <img src="{{ str_replace(public_path(), '', $path) }}">
-          @php
-            $filename = basename($path, ".jpg");
-          @endphp
-          <p class="text-dark fw-bold py-2">{{ $filename }}</p>
+          <p class="text-primary fw-bold py-2">{{ $machine->title }}</p>
         </div>
       </div>
     </div>
